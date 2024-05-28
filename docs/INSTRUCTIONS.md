@@ -21,13 +21,13 @@ In de sprint Proof of Concept ga je een opdrachtgever helpen met een data-driven
 Op basis van een briefing ga je een opdrachtgever helpen met een data-driven online concept.
 
 
-* Maandag 5 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken. 
+* Maandag 3 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken. 
 
 * Je hebt 3 weken om de opdracht te maken. Hiervoor doorloop je de fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen) en pas je verschillende methoden en technieken toe die je hebt geleerd.  
 
-* Donderdag 22 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je/jullie hebben gemaakt.
+* Donderdag 20 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je/jullie hebben gemaakt.
 
-* Donderdag 6 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding. 
+* Donderdag 4 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding. 
 
 
 ### Analyseren
@@ -65,24 +65,6 @@ In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je
 Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toegankelijkheid testen met lighthouse en handmatige tests, je bevindingen documenteren en bepalen of je nog een iteratie maakt.
 
 ## Criteria
-
-Focus sprint 12 - Je gebruikt API's en databases voor het ontwerpen en ontwikkelen van gebruiksvriendelijke interactieve toepassingen voor het web.
-
-Doel van deze opdracht:
-* Je gaat alles wat je hebt geleerd toepassen om een opdracht voor een opdrachtgever te maken.
-
-Voor deze leertaak gelden de gedragscriteria: 
-* Samenwerken: Je werkt in teams, vraagt begeleiding waar nodig en geeft feedback aan teamleden.
-* Samenwerken: Je draagt verantwoording voor eigen resultaten, verwerkt ontvangen feedback en wijst teamleden op hun verantwoording.
-* Samenwerken: Je identificeert diversiteit binnen teams en handelt respectvol naar anderen.
-* Communiceren: Je luistert en vraagt door, neemt wat een ander zegt serieus.
-* Communiceren: Je kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden.
-* Communiceren: Je documenteert op professionele wijze en houdt voortgang bij.
-* Probleemoplossend vermogen: Je analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting.
-* Probleemoplossend vermogen: Je combineert aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving om een passende oplossing voor een opdrachtgever te realiseren.
-* Probleemoplossend vermogen:  Je schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen.
-* Leren vermogen: Je kent eigen capaciteiten en beperkingen, vergelijkt dit met het vermogen van anderen en maakt dit bespreekbaar
-
 
 Deze opdracht is done als:
 - [ ] Je hebt gewerkt volgens de verschillende fases van de development-lifecycle en je hebt je werk gedocumenteerd in de Readme en Wiki
