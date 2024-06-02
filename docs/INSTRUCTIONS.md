@@ -35,7 +35,8 @@ In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voere
 
 Bijvoorbeeld: grip krijgen op een taak door het voeren van een gesprek met jouw opdrachtgever, schrijven van een debriefing, inventarisatie van bestaande informatie, interface audit, interface inventory, planning, maken van een todo lijst en bepalen van definitions of done.
 
-#### Debriefing
+
+#### Briefing en Debriefing
 De debriefing is noodzakelijk voor de opdrachtgever om na te gaan of duidelijk is overgekomen wat hij voor ogen had. Maar ook voor jou en je team om te controleren of je alles goed hebt begrepen en geconcretiseerd.
 
 Voordat je naar de briefing van de opdrachtgever gaat bereid je je voor op het gesprek zodat je weet welke vragen je moet stellen. Na de briefing stuur je de opdrachtgever een debriefing waarin je in eigen woorden opschrijft wat jij denkt dat de opdracht inhoudt.
