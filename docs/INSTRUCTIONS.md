@@ -1,6 +1,6 @@
 # Proof of Concept
 
-Een data driven online concept voor een opdrachtgever
+Ontwerp en maak een data driven online concept voor een opdrachtgever.
 
 ## Context
 Deze leertaak hoort bij sprint _Proof of Concept_. Dit is een leertaak die je met een team of individueel uitvoert.
