@@ -1,0 +1,15 @@
+  <%- include('./partials/head') %>
+</head>
+
+<body>
+  <a href="/brew" class="button">Ingredients</a>
+
+  <main>
+    <% potions.forEach(potion => { %>
+      <h3><%= potion.name %></h3>
+      <img src="<%= potion.asset %>" alt="<%= potion.name %>">
+    <% }) %> 
+  </main>
+
+</body>
+</html>
