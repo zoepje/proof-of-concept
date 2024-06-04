@@ -73,9 +73,7 @@ app.post('/brew', (request, response) => {
       if (areEqual(ingredients, potions[i].ingredients)){
         response.redirect(301, '/')
       } 
-    } 
-
-    response.status(500).send('Internal Server Error');
+    }
     
     // } else if (areEqual(ingredients, potions[1].ingredients)){
     //   response.redirect(301, '/brew')
