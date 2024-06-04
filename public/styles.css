@@ -1,0 +1,21 @@
+:root {
+    /* Typografie */
+    --body-fonts: "Nunito", sans-serif;
+    --font-weights: lighter, bold;
+    --line-height: 1.5;
+    
+    /* kleuren */
+    --green-smith: #B9FFB7;
+    --orange-crayola: #FF7535;
+    --majorelle-blue: #5E43FF;
+    --Xiketic: #120B11;
+    --Raisin-black: #302A2F;
+    --Sonic-silver: #736f72;
+    --Snow: #FCF8F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
