@@ -14,6 +14,21 @@ body {
   font-family: MedievalSharp, sans-serif;
 }
 
+main {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #8806D8;
+}
+
 .button {
   text-decoration: none;
   color: white;
@@ -22,6 +37,6 @@ body {
   margin: 1rem;
 }
 
-main {
-  margin: 1rem;
+.intro {
+  margin: auto;
 }
