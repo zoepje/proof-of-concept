@@ -9,7 +9,7 @@
     <img src="/assets/cauldron.png" alt="cauldron" width="400" height="400">
 
     <form method="post" action="/brew">
-      <button type="submit">Start brewing</button>
+      <button type="submit" class="button">Start brewing</button>
       <% ingredients.forEach(ingredient => { %>
         <fieldset>
           <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.id %>">

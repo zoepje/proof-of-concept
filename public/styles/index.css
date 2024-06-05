@@ -1,0 +1,40 @@
+body::before{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+}
+
+.intro {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--text-color);
+  }
+}
+
+@media only screen and (min-width: 480px){
+  main{
+    position: relative;
+    height: 90vh;
+  }
+  
+  .intro {
+    position: absolute;
+    width: 80vw;
+    transform: translate(-50%, 70%);
+  }
+}

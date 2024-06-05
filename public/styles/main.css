@@ -4,9 +4,14 @@
   margin: 0;
 }
 
+:root {
+  --text-color: #ffffff;
+  --accent-color1: #8806d8;
+  --accent-color2: #99530f;
+}
+
 body {
   margin: 1rem;
-  background: linear-gradient(#8806D8, #99530F);
   background-image: url(/assets/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,22 +26,19 @@ main {
 
 .link {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .link:hover {
   text-decoration: underline;
-  color: #8806D8;
+  color: var(--accent-color1);
 }
 
 .button {
+  border: none;
   text-decoration: none;
-  color: white;
-  background-color: #8806D8;
+  color: var(--text-color);
+  background-color: var(--accent-color1);
   padding: 10px;
   margin: 1rem;
-}
-
-.intro {
-  margin: auto;
 }
