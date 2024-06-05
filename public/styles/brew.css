@@ -44,8 +44,12 @@ input:focus ~ .ingredient-card {
   display: block;
 }
 
-/* fieldset:hover .ingredient-card{
+.ingredient-hover{
+  display: none;
+}
+
+fieldset:hover .ingredient-hover{
   display: block;
-} */
+}
 /* #endregion Ingredient card */
 /* #endregion Form */

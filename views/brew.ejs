@@ -13,6 +13,8 @@
     <form method="post" action="/brew" id="ingredient-list">
       <% ingredients.forEach(ingredient => { %>
         <fieldset>
+          <p class="ingredient-hover"><%= ingredient.name %></p>
+
           <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.id %>">
           <label for="<%= ingredient.id %>">
             <img src="<%- ingredient.asset %>" alt="<%= ingredient.name %>" width="100" height="100">
