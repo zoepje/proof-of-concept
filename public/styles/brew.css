@@ -1,0 +1,29 @@
+/* #region Form */
+form {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 99vw;
+  overflow-x: scroll;
+}
+
+fieldset {
+  border: none;
+  border-radius: 10%;
+  backdrop-filter: blur(50px);
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+
+  & input{
+    position: absolute;
+    top: -9999em;
+  }
+
+  & input:checked ~ label{
+    filter: blur(3px) grayscale(80%);
+  }
+}
+/* #endregion Form */

@@ -8,6 +8,7 @@
   --text-color: #ffffff;
   --accent-color1: #8806d8;
   --accent-color2: #99530f;
+  --focus-color: #2200ff;
 }
 
 body {
@@ -24,18 +25,36 @@ main {
   width: fit-content;
 }
 
+label {
+  cursor: pointer;
+}
+
+:focus {
+  outline: solid .2em var(--focus-color);
+}
+
+:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+fieldset:has(:focus-visible){
+  outline: solid .2em var(--focus-color);
+}
+
 .link {
   text-decoration: none;
   color: var(--text-color);
 }
 
-.link:hover {
+.link:hover, .link:focus {
   text-decoration: underline;
   color: var(--accent-color1);
 }
 
 .button {
   border: none;
+  cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
   background-color: var(--accent-color1);

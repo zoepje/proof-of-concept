@@ -8,6 +8,7 @@
   <main>
     <% potions.forEach(potion => { %>
       <h3><%= potion.name %></h3>
+      <p><%= potion.ingredients %></p>
       <img src="<%= potion.asset %>" alt="<%= potion.name %>">
     <% }) %> 
   </main>

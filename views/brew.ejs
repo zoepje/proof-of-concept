@@ -1,4 +1,5 @@
   <%- include('./partials/head') %>
+  <link rel="stylesheet" href="/styles/brew.css">
   <title>Brewing | Book of Potions</title>
 </head>
 
@@ -8,8 +9,8 @@
   <main>
     <img src="/assets/cauldron.png" alt="cauldron" width="400" height="400">
 
-    <form method="post" action="/brew">
-      <button type="submit" class="button">Start brewing</button>
+    <button type="submit" class="button" form="ingredient-list">Start brewing</button>
+    <form method="post" action="/brew" id="ingredient-list">
       <% ingredients.forEach(ingredient => { %>
         <fieldset>
           <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.id %>">
