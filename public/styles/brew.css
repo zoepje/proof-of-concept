@@ -6,7 +6,7 @@ form {
   display: flex;
   flex-direction: row;
   width: 99vw;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 fieldset {
