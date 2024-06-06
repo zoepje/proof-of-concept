@@ -1,16 +1,22 @@
+body{
+  margin: 1rem;
+}
+
 .container {
   height: 78vh;
 
   & img {
     position: absolute;
-    width: fit-content;
-    transform: translate(140%, 50%);
+    width: 60%;
+    object-fit: contain;
+    bottom: 13vh;
+    right: 10px;
   }
 
   & button {
     position: absolute;
-    bottom: 200px;
-    right: 100px;
+    bottom: 20vh;
+    left: 10px;
   }
 }
 /* #region Form */
@@ -29,13 +35,19 @@ fieldset {
   margin: 10px;
   width: fit-content;
 
-  & input{
+  & input {
     position: absolute;
     top: -9999em;
   }
 
-  & input:checked ~ label{
+  & input:checked ~ label {
     filter: blur(3px) grayscale(80%);
+  }
+
+  & label img {
+    width: 10vw;
+    object-fit: contain;
+    height: auto;
   }
 }
 
@@ -43,14 +55,14 @@ fieldset {
 .ingredient-card{
   background-color: var(--accent-color1);
   color: var(--text-color);
+  width: 80vw;
+  max-width: 400px;
   display: none;
-  position: absolute;
-  top: 70px;
-  left: 30px;
-  width: 500px;
-  height: 70vh;
   padding: 20px;
   border-radius: 25px;
+  position: absolute;
+  top: 8vh;
+  left: 6vw;
 }
 
 :focus:not(:focus-visible) ~ .ingredient-card {
@@ -66,3 +78,36 @@ fieldset:hover ~ .ingredient-card {
 }
 /* #endregion Ingredient card */
 /* #endregion Form */
+
+@media only screen and (min-width: 500px){
+  .container{
+    & img {
+      bottom: 16vh;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .container{
+    & img {
+      bottom: 20vh;
+    }
+
+    & button {
+      right: 30px;
+      left:auto;
+    }
+  }
+
+  fieldset {
+    & label img {
+      height: revert-layer;
+    }
+  }
+
+  .ingredient-card {
+    top: 70px;
+    left: 30px;
+    height: 70vh;
+  }
+}
