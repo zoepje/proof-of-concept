@@ -45,11 +45,29 @@ fieldset:has(:focus-visible){
 .link {
   text-decoration: none;
   color: var(--text-color);
+  transition: color .3s;
 }
 
-.link:hover, .link:focus {
-  text-decoration: underline;
+.link:is(:hover, :focus-visible){
   color: var(--accent-color2);
+}
+
+.link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: .2em;
+  background-color: var(--accent-color2);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform .3s;
+}
+
+.link:is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
+  transform-origin: left center;
 }
 
 .button {
