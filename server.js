@@ -53,6 +53,7 @@ app.post('/brew', (request, response) => {
     let ingredients = request.body.ingredients;
     let matchFound = false;
     let matchedPotionId = null;
+    console.log(ingredients)
 
     // Check if there are multiple inputs
     if (!Array.isArray(ingredients)) {
