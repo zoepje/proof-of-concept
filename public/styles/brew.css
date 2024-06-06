@@ -16,6 +16,7 @@ fieldset {
   padding: 10px;
   margin: 10px;
   width: fit-content;
+  height: 120px;
 
   & input{
     position: absolute;
@@ -29,11 +30,10 @@ fieldset {
 
 /* #region Ingredient card */
 .ingredient-card{
-  display: none;
-  /* position: relative;
+  position: relative;
   top: 80px;
   left: 30px;
-  z-index: 1; */
+  z-index: 1;
 }
 
 :focus:not(:focus-visible) ~ .ingredient-card {
@@ -51,5 +51,14 @@ input:focus ~ .ingredient-card {
 fieldset:hover .ingredient-hover{
   display: block;
 }
+
+.popoverbutton{
+  border: none;
+  opacity: 0;
+  position: relative;
+  top: -103px;
+  z-index: -1;
+}
+
 /* #endregion Ingredient card */
 /* #endregion Form */
