@@ -18,6 +18,10 @@ body{
     bottom: 20vh;
     left: 10px;
   }
+
+  & .result{
+    display: none;
+  }
 }
 /* #region Form */
 form {
@@ -72,10 +76,6 @@ fieldset {
 fieldset:has(:focus) ~ .ingredient-card {
   display: block;
 }
-
-fieldset:hover ~ .ingredient-card {
-  display: block;
-}
 /* #endregion Ingredient card */
 /* #endregion Form */
 
@@ -103,11 +103,35 @@ fieldset:hover ~ .ingredient-card {
     & label img {
       height: revert-layer;
     }
+
+    & .mobile-label {
+      display: none;
+    }
   }
 
   .ingredient-card {
     top: 70px;
     left: 30px;
     height: 70vh;
+  }
+
+  fieldset:hover ~ .ingredient-card {
+    display: block;
+  }
+}
+
+@media (scripting: enabled) {
+  .container{
+    & .result {
+      display: block;
+      position: relative;
+      width: fit-content;
+      top: 10vh;
+      left: 60vw;
+
+      & li {
+        list-style: none;
+      }
+    }
   }
 }
