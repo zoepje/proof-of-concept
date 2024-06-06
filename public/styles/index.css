@@ -13,28 +13,39 @@ body::before{
   filter: brightness(50%);
 }
 
+main {
+  height: 97vh;
+  margin: 1rem;
+}
+
 .intro {
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  transform: translate(0%, 40%);
 
   & h1 {
     text-align: center;
     font-size: 3rem;
     color: var(--text-color);
   }
+
+  & img {
+    width: 90%;
+    object-fit: contain;
+  }
 }
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 800px){
   main{
-    position: relative;
     height: 90vh;
   }
   
   .intro {
-    position: absolute;
-    width: 80vw;
-    transform: translate(-50%, 70%);
+    position: relative;
+    width: 97vw;
+    transform: translate(0%, 70%);
   }
 }
