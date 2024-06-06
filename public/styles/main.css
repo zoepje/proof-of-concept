@@ -8,6 +8,7 @@
   --text-color: #ffffff;
   --accent-color1: #8806d8;
   --accent-color2: #ff8000;
+  --accent-color3: #d6228e;
   --focus-color: #2200ff;
 }
 
@@ -59,4 +60,17 @@ fieldset:has(:focus-visible){
   background-color: var(--accent-color1);
   padding: 10px;
   margin: 1rem;
+  background-image: linear-gradient(var(--accent-color2), var(--accent-color3));
+  background-position: left;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: .2s;
+
+  &:active {
+    transform: translateY(3px)
+  } 
+}
+
+.button:is(:hover, :focus-visible) {
+  background-size: 100% 100%;
 }
