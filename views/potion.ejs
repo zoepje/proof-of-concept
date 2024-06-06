@@ -1,11 +1,21 @@
   <%- include('./partials/head') %>
+  <link rel="stylesheet" href="/styles/potion.css">
   <title><%= potion.name %> | Book of Potions</title>
 </head> 
 <body>
   <main>
-    <img src="<%= potion.asset %>" alt="<%= potion.name %>" width="400" height="400">
-    <h1>You brewed a(n) <%= potion.name %></h1>
-    <a href="/brew" class="link">Brew more</a>
+    <article class="potion nice">
+      <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star1">
+      <img src="/assets/star-yellow-glow.png" alt="star" width="40" height="40" id="star2">
+      <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star3">
+      <img src="<%= potion.asset %>" alt="<%= potion.name %>" width="400" height="400">
+      <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star4">
+      <img src="/assets/star-white-glow.png" alt="star" width="40" height="40" id="star5">
+      <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star6">
+      <h1>You brewed a <%= potion.name %></h1>
+    </article>
   </main>
+
+  <a href="/brew" class="link">Brew more</a>
 </body>
 </html>

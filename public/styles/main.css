@@ -7,7 +7,7 @@
 :root {
   --text-color: #ffffff;
   --accent-color1: #8806d8;
-  --accent-color2: #99530f;
+  --accent-color2: #ff8000;
   --focus-color: #2200ff;
 }
 
@@ -49,7 +49,7 @@ fieldset:has(:focus-visible){
 
 .link:hover, .link:focus {
   text-decoration: underline;
-  color: var(--accent-color1);
+  color: var(--accent-color2);
 }
 
 .button {

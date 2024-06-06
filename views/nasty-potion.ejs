@@ -1,12 +1,16 @@
   <%- include('./partials/head') %>
+  <link rel="stylesheet" href="/styles/potion.css">
   <title>Nasty potion | Book of Potions</title>
 </head> 
 
 <body>
   <main>
-    <img src="/assets/nasty-potion.png" alt="nasty potion" width="400" height="400">
-    <h1>You brewed a nasty potion.</h1>
-    <a href="/brew" class="link">Brew more</a>
+    <article class="potion nasty">
+      <img src="/assets/nasty-potion.png" alt="nasty potion" width="400" height="400">
+      <h1>You brewed a nasty potion.</h1>
+    </article>
   </main>
+
+  <a href="/brew" class="link">Brew more</a>
 </body>
 </html>
