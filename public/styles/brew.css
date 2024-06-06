@@ -73,7 +73,7 @@ fieldset {
   display: none;
 }
 
-fieldset:has(:focus) ~ .ingredient-card {
+fieldset:has(:focus-visible) ~ .ingredient-card {
   display: block;
 }
 /* #endregion Ingredient card */
