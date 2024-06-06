@@ -1,8 +1,20 @@
+.container {
+  height: 78vh;
+
+  & img {
+    position: absolute;
+    width: fit-content;
+    transform: translate(140%, 50%);
+  }
+
+  & button {
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+  }
+}
 /* #region Form */
 form {
-  position: fixed;
-  bottom: 10px;
-  left: 0;
   display: flex;
   flex-direction: row;
   width: 99vw;
@@ -29,28 +41,28 @@ fieldset {
 
 /* #region Ingredient card */
 .ingredient-card{
+  background-color: var(--accent-color1);
+  color: var(--text-color);
   display: none;
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 30px;
-  z-index: 1;
+  width: 500px;
+  height: 70vh;
+  padding: 20px;
+  border-radius: 25px;
 }
 
 :focus:not(:focus-visible) ~ .ingredient-card {
   display: none;
 }
 
-input:focus ~ .ingredient-card {
+fieldset:has(:focus) ~ .ingredient-card {
   display: block;
 }
-/* 
-.ingredient-hover{
-  display: none;
-}
 
-fieldset:hover .ingredient-hover{
+fieldset:hover ~ .ingredient-card {
   display: block;
-} */
-
+}
 /* #endregion Ingredient card */
 /* #endregion Form */

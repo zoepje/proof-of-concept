@@ -7,25 +7,30 @@
   <a href="/potions" class="button">Potions</a>
   
   <main>
-    <img src="/assets/cauldron.png" alt="cauldron" width="400" height="400">
+    <div class="container">
+      <!-- Image placeholder zoals bijvoorbeeld een boek -->
+      <img src="/assets/cauldron.png" alt="cauldron" width="400" height="400">
 
-    <button type="submit" class="button" form="ingredient-list">Start brewing</button>
+      <button type="submit" class="button" form="ingredient-list">Start brewing</button>
+    </div>
 
     <form method="post" action="/brew" id="ingredient-list">
       <% ingredients.forEach(ingredient => { %>
-        <fieldset>
-          <p class="ingredient-hover"><%= ingredient.name %></p>
-
-          <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.id %>">
-          <label for="<%= ingredient.id %>">
-            <img src="<%= ingredient.asset %>" alt="<%= ingredient.name %>" width="100" height="100">
-          </label>
+        <div class="containter-ingredient">
+          <fieldset>
+            <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.id %>">
+            <label for="<%= ingredient.id %>">
+              <img src="<%= ingredient.asset %>" alt="<%= ingredient.name %>" width="100" height="100">
+            </label>
+            <!-- <p class="ingredient-hover"><%= ingredient.name %></p> -->
+          </fieldset> 
+  
           <article class="ingredient-card" id="ingredient<%= ingredient.id %>">
             <h2><%= ingredient.name %></h2>
             <p><%= ingredient.description %></p>
             <img src="<%= ingredient.asset %>" alt="<%= ingredient.name %>" width="200" height="200">
           </article>
-        </fieldset> 
+        </div>
       <% }) %> 
     </form>
   </main>
