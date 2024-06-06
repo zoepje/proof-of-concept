@@ -98,6 +98,6 @@ app.get('/potions', (request, response) => {
     fetchJson(`${ingredientsUrl}`)
   ]).then(([potions, ingredients]) => {
 
-  response.render('potions', {potions, ingredients });
+  response.render('book', {potions, ingredients });
   })
 })
