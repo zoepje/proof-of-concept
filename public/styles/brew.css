@@ -163,6 +163,7 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
       & summary {
         font-size: 24px;
         font-weight: bold;
+        cursor: pointer;
       }
 
       & li {
