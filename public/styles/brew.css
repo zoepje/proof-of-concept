@@ -23,6 +23,7 @@ body{
     display: none;
   }
 }
+
 /* #region Form */
 form {
   display: flex;
@@ -57,24 +58,44 @@ fieldset {
 
 /* #region Ingredient card */
 .ingredient-card{
-  background-color: var(--accent-color1);
+  background-color: var(--card-color);
   color: var(--text-color);
   width: 80vw;
   max-width: 400px;
-  display: none;
-  padding: 20px;
+  padding: 40px;
   border-radius: var(--border-radius);
   position: absolute;
   top: 8vh;
   left: 6vw;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+
+  & h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+  }
+
+  & img{
+    margin: 2rem;
+  }
 }
 
 :focus:not(:focus-visible) ~ .ingredient-card {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 fieldset:has(:focus-visible) ~ .ingredient-card {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 /* #endregion Ingredient card */
 /* #endregion Form */
@@ -116,7 +137,8 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
   }
 
   fieldset:hover ~ .ingredient-card {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -127,15 +149,21 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
       position: relative;
       width: 40vw;
       max-width: 250px;
-      height: 60vh;
-      top: 10vh;
-      left: 40vw;
+      max-height: 60vh;
+      top: 5vh;
+      left: 30vw;
       z-index: 1;
       border-radius: var(--border-radius);
       background-image: url('/assets/nodebook.png');
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       padding: 10px;
+
+      & summary {
+        font-size: 24px;
+        font-weight: bold;
+      }
 
       & li {
         list-style: none;
