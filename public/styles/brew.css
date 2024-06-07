@@ -33,7 +33,7 @@ form {
 
 fieldset {
   border: none;
-  border-radius: 10%;
+  border-radius: var(--border-radius);
   backdrop-filter: blur(50px);
   padding: 10px;
   margin: 10px;
@@ -63,7 +63,7 @@ fieldset {
   max-width: 400px;
   display: none;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: var(--border-radius);
   position: absolute;
   top: 8vh;
   left: 6vw;
@@ -125,9 +125,17 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
     & .result {
       display: block;
       position: relative;
-      width: fit-content;
+      width: 40vw;
+      max-width: 250px;
+      height: 60vh;
       top: 10vh;
-      left: 60vw;
+      left: 40vw;
+      z-index: 1;
+      border-radius: var(--border-radius);
+      background-image: url('/assets/nodebook.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px;
 
       & li {
         list-style: none;

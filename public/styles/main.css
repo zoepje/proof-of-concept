@@ -10,6 +10,8 @@
   --accent-color2: #ff8000;
   --accent-color3: #d6228e;
   --focus-color: #2200ff;
+
+  --border-radius: 25px;
 }
 
 body {
