@@ -1,0 +1,18 @@
+<%- include('./partials/head') %>
+
+<main>
+ 
+    <form class="login" action="/dashboard" method="get">
+        <h2>Log hier in</h2>
+    
+      <label for="username">Naam:</label>
+      <input type="email" id="username" name="username">
+     
+      <label for="password">Wachtwoord:</label>
+      <input type="password" id="password" name="password">
+      
+      <input type="submit" value="Log in">
+    </form>
+    </main>
+
+<%- include('./partials/footer') %>

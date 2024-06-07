@@ -1,7 +1,8 @@
 :root {
     /* Typografie */
     --body-fonts: "Nunito", sans-serif;
-    --font-weights: lighter, bold;
+    --font-large:  bold;
+    --font-small: lighter;
     --line-height: 1.5;
     
     /* kleuren */
@@ -14,8 +15,37 @@
     --Snow: #FCF8F7;
 }
 
+/* Algemene stijling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-fonts);
+    background-color: var(--Snow);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    background-color: var(--Sonic-silver);
+    padding: 5em;
+}
+
+h2 {
+    color: var(--orange-crayola);
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.4em;
+}
+
+input[type="submit"] {
+    width: 100%;
 }
