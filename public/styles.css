@@ -33,19 +33,35 @@ main {
 }
 
 .login {
-    background-color: var(--Sonic-silver);
+    border: 3px solid var(--Sonic-silver);
     padding: 5em;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    
 }
 
 h2 {
-    color: var(--orange-crayola);
+    background-image: -webkit-linear-gradient(var(--orange-crayola), var(--majorelle-blue));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 72px;
 }
 
 input[type="email"], input[type="password"] {
     width: 100%;
     padding: 0.4em;
+    margin-bottom: 30px;
 }
 
 input[type="submit"] {
     width: 100%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    background-color: var(--Xiketic);
+    color: var(--Snow);
+    font-family: var(--body-fonts);
+    border: 2px solid var(--Sonic-silver);
+    border-radius: 5px;
+
 }

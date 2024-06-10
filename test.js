@@ -1,7 +1,3 @@
-console.log('Hier komt je server voor Sprint 12.')
-import express from 'express'
-import fetchJson from './helpers/fetch-json.js'
-
 /**
  * TODO(developer): Uncomment this variable and replace with your
  *   Google Analytics 4 property ID before running the sample.
@@ -15,25 +11,9 @@ import {BetaAnalyticsDataClient} from '@google-analytics/data';
 // specified in GOOGLE_APPLICATION_CREDENTIALS environment variable.
 const analyticsDataClient = new BetaAnalyticsDataClient();
 
-const app = express()
-app.set('view engine', 'ejs')
-app.set('views', './views')
-app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true }))
-app.set('port', process.env.PORT || 8000)
-app.listen(app.get('port'), function () {
-  console.log(`Application started on http://localhost:${app.get('port')}`)
-})
-
-// get routes
-app.get('/', function(request, response) {
-
-  response.render('index');
-});
-
-app.get('/dashboard', async function(request, response) {
-
-  const [apiResponse] = await analyticsDataClient.runReport({
+// Runs a simple report.
+async function runReport() {
+  const [response] = await analyticsDataClient.runReport({
     property: `properties/${propertyId}`,
     dateRanges: [
       {
@@ -43,7 +23,7 @@ app.get('/dashboard', async function(request, response) {
     ],
     dimensions: [
       {
-        name: 'city',
+        name: 'browser',
       },
     ],
     metrics: [
@@ -53,6 +33,10 @@ app.get('/dashboard', async function(request, response) {
     ],
   });
 
-  response.render('dashboard', {data: apiResponse});
-});
+  console.log('Report result:');
+  response.rows.forEach(row => {
+    console.log(row.dimensionValues[0], row.metricValues[0]);
+  });
+}
 
+runReport();

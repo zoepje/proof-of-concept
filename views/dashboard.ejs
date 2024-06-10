@@ -1,0 +1,9 @@
+<%- include('./partials/head') %>
+<% console.log(data.rows) %>
+
+<% data.rows.forEach(function(row) { %>
+
+    <p><%= row.dimensionValues[0].value %>: <%= row.metricValues[0].value %></p>
+
+<% }) %>
+<%- include('./partials/footer') %>
