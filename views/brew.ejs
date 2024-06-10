@@ -9,7 +9,7 @@
   
   <main>
     <div class="container">
-      <details class="result">
+      <details class="result" open>
         <summary>Ingrediënts:</summary>
         <ul class="ingredient-list">
             <!-- Checked ingredienten komen hier te staan -->
@@ -22,7 +22,7 @@
       <button type="submit" class="button" form="ingredient-form">Start brewing</button>
     </div>
 
-    <form method="post" action="/brew" id="ingredient-form">
+    <form method="POST" action="/brew" id="ingredient-form">
       <% ingredients.forEach(ingredient => { %>
         <div class="containter-ingredient">
           <fieldset>

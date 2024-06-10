@@ -1,8 +1,9 @@
 const ingredientList = document.querySelector('.ingredient-list'),
-      noItems = document.createElement('li');
+      noItems = document.createElement('li'),
+      form = document.querySelector('#ingredient-form');
 
 // Function update de gekozen ingredienten
-function updateCheckedIngredients() {
+function listIngredients() {
   const checkboxes = document.querySelectorAll('input[name="ingredients"]:checked');
 
   // Haal alle lijst items weg
@@ -22,10 +23,34 @@ function updateCheckedIngredients() {
   }
 }
 
+// Functie check of er 2 of meer checkboxes gecheckd zijn
+function checked() {
+  const checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+  const checkedCount = checkboxes.length;
+
+  if(checkedCount < 1){
+    alert("You don't have any ingrediënts selected");
+    return false;
+  }
+
+  if(checkedCount < 2){
+    alert("What a boring potion, try adding one more ingrediënt");
+    return false;
+  }
+
+  return true;
+}
+
+form.addEventListener('submit', function(event) {
+  if (!checked()) {
+    event.preventDefault(); 
+  }
+});
+
 // Doe een eventListener op elke checkbox wanneer er iets veranderd aan de input
 document.querySelectorAll('input[name="ingredients"]').forEach(checkbox => {
-    checkbox.addEventListener('change', updateCheckedIngredients);
+    checkbox.addEventListener('change', listIngredients);
 });
 
 // Voor het begin van het laden
-updateCheckedIngredients();
+listIngredients();

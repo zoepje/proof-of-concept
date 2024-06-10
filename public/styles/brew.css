@@ -29,7 +29,7 @@ form {
   display: flex;
   flex-direction: row;
   width: 99vw;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 fieldset {
@@ -154,10 +154,7 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
       left: 30vw;
       z-index: 1;
       border-radius: var(--border-radius);
-      background-image: url('/assets/nodebook.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: #FADD9A;
       padding: 10px;
 
       & summary {

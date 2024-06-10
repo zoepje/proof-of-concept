@@ -1,0 +1,12 @@
+body{
+  margin: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
