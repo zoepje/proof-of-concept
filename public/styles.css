@@ -32,6 +32,21 @@ main {
     justify-content: center;
 }
 
+header {
+    width: 100%;
+    padding: 1.5em;
+    background-color: var(--orange-crayola);
+}
+
+footer {
+    width: 100%;
+    padding: 1.5em;
+    background-color: var(--Raisin-black);
+    position: fixed;
+    bottom: 0;
+}
+
+/* Login stijling */
 .login {
     border: 3px solid var(--Sonic-silver);
     padding: 5em;
@@ -63,5 +78,45 @@ input[type="submit"] {
     font-family: var(--body-fonts);
     border: 2px solid var(--Sonic-silver);
     border-radius: 5px;
+}
 
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--Snow);
+    color: var(--Xiketic);
+}
+
+/* Dashboard stijling */
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.dashboard-header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.dashboard-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.dashboard-card {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	padding: 20px;
+	width: 250px;
+}
+
+.dashboard-card:hover {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
