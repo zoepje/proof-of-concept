@@ -8,19 +8,21 @@
 
   <main>
     <% potions.forEach(potion => { %>
-      <div class="potion-card">
-        <article class="potion-card-front">
+      <fieldset class="potion-card">
+        <input type="checkbox" id="potion<%= potion.id %>" class="potion-checkbox">
+        <label for="potion<%= potion.id %>" class="potion-card-front">
           <h2><%= potion.name %></h2>
           <img src="<%= potion.asset %>" alt="<%= potion.name %>">
-        </article>
-        
+        </label>
+  
         <article class="potion-card-back">
+          <label for="potion<%= potion.id %>" class="close-btn">&times;</label>
           <h2><%= potion.name %></h2>
           <p><%= potion.description %></p>
           <p><strong>Effects:</strong> <%= potion.effects %></p>
           <p><strong>Rarity:</strong> <%= potion.rarity %> </p>
         </article>
-      </div>
+      </fieldset>
     <% }) %> 
   </main>
 </body>
