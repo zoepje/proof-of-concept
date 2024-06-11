@@ -7,6 +7,7 @@ body{
 
   & img {
     position: absolute;
+    z-index: -1;
     width: 60%;
     object-fit: contain;
     bottom: 13vh;
@@ -29,7 +30,7 @@ form {
   display: flex;
   flex-direction: row;
   width: 99vw;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 fieldset {
@@ -45,7 +46,7 @@ fieldset {
     top: -9999em;
   }
 
-  & input:checked ~ label {
+  & input:checked ~ label img:nth-child(1){
     filter: blur(3px) grayscale(80%);
   }
 
@@ -54,6 +55,18 @@ fieldset {
     object-fit: contain;
     height: auto;
   }
+}
+
+.ingredient-duplicate {
+  position: absolute;
+  width: 100px;
+  z-index: 100;
+  object-fit: contain;
+  height: auto;
+  offset-path: path(var(--path)); 
+  offset-rotate: 0deg;
+  animation: moveIngredient linear forwards;
+  animation-duration: calc( .4s + var(--distance) / 100 * .075s );
 }
 
 /* #region Ingredient card */
@@ -100,6 +113,15 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
 /* #endregion Ingredient card */
 /* #endregion Form */
 
+/* #region Keyframes */
+@keyframes moveIngredient {
+  100% {
+    offset-distance: 100%;
+  }
+}
+/* #endregion Keyframes */
+
+/* #region Media */
 @media only screen and (min-width: 500px){
   .container{
     & img {
@@ -169,3 +191,5 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
     }
   }
 }
+
+/* #endregion Media */
