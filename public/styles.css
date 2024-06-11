@@ -27,6 +27,26 @@ body {
     background-color: var(--Snow);
 }
 
+nav {
+    height: 80%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    overflow-x: hidden;
+    background-color: var(--Raisin-black);
+    padding-top: 20px;
+}
+
+nav li a {
+    padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--Snow);
+  display: block;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -57,10 +77,18 @@ footer {
 }
 
 h2 {
-    background-image: -webkit-linear-gradient(var(--orange-crayola), var(--majorelle-blue));
+    background-image: -webkit-linear-gradient(270deg, var(--orange-crayola), var(--majorelle-blue));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 72px;
+}
+
+h3 {
+    background-image: -webkit-linear-gradient(270deg, var(--orange-crayola), var(--majorelle-blue));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 42px;
+    font-style: var(--font-large);
 }
 
 input[type="email"], input[type="password"] {
@@ -88,23 +116,25 @@ input[type="submit"]:hover {
 
 /* Dashboard stijling */
 .dashboard {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 10px;
+    height: 100vh;
 }
 
 .dashboard-header {
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
-	text-align: center;
+    grid-column: 1 / -1;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
 
 .dashboard-content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .dashboard-card {
