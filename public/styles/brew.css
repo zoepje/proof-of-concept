@@ -22,6 +22,7 @@ body{
 
   & .result{
     display: none;
+
   }
 }
 
@@ -115,8 +116,13 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
 
 /* #region Keyframes */
 @keyframes moveIngredient {
+  70%{
+    opacity: 1;
+  }
+
   100% {
     offset-distance: 100%;
+    opacity: 0;
   }
 }
 /* #endregion Keyframes */
@@ -173,7 +179,7 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
       max-width: 250px;
       max-height: 60vh;
       top: 5vh;
-      left: 30vw;
+      left: 0;
       z-index: 1;
       border-radius: var(--border-radius);
       background-color: #FADD9A;
@@ -186,7 +192,16 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
       }
 
       & li {
-        list-style: none;
+        list-style: '';
+      }
+    }
+  }
+
+  @media only screen and (min-width: 500px){
+    .container {
+      & .result {
+        top: 5vh;
+        left: 30vw;
       }
     }
   }

@@ -76,16 +76,16 @@ function animateIngredient(checkbox, cauldron) {
   const startX = ingredientRect.width / 2;
   const startY = ingredientRect.height / 2;
 
-  const deltaX = cauldronRect.x - ingredientRect.x - (ingredientRect.width - cauldronRect.width) / 2;
-  const deltaY = cauldronRect.y - ingredientRect.y - (ingredientRect.height - cauldronRect.height) / 2;
+  const deltaX = cauldronRect.x - ingredientRect.x - (ingredientRect.width - cauldronRect.width) / 2.3;
+  const deltaY = cauldronRect.y - ingredientRect.y - (ingredientRect.height - cauldronRect.height) / 3.5;
 
   const distance = Math.hypot(deltaX, deltaY);
 
-  const firstControlPointX = max(deltaX * .5, Math.sqrt(distance) * 4);
-  const firstControlPointY = deltaX * -.25;
+  const firstControlPointX = deltaX / 2;
+  const firstControlPointY = deltaY * 3;
 
-  const secondControlPointX = max(deltaX * .9, Math.sqrt(distance) * 6);
-  const secondControlPointY = deltaY * .5;
+  const secondControlPointX = deltaX / 1.5;
+  const secondControlPointY = deltaY * 1.5;
 
   const path = `'m${startX},${startY} c${firstControlPointX},${firstControlPointY} ${secondControlPointX},${secondControlPointY} ${deltaX},${deltaY}'`;
   clonedImg.style.setProperty("--path", path);
