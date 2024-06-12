@@ -18,6 +18,83 @@ body::before{
   filter: brightness(50%);
 }
 
+/* #region Loading */
+.loader-container {
+  color: var(--text-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  animation: loading 1.2s linear forwards;
+}
+
+.loader-container::before{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+}
+
+.loader {
+  position: relative;
+  width: 80vw;
+  height: 95vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    font-size: 2rem;
+  }
+
+  & .cauldron{
+    width: 90%;
+    object-fit: contain;
+  }
+
+  & #steam{
+    position: relative;
+    top: 14vh;
+  }
+
+  & #twinkle1 {
+    position: absolute;
+    top: 42vh;
+    left: -3vw;
+  }
+
+  & #twinkle2 {
+    position: absolute;
+    top: 27vh;
+    left: 8vw;
+  }
+
+  & #twinkle3 {
+    position: absolute;
+    top: 20vh;
+    left: 51vw;
+  }
+
+  & #twinkle4 {
+    position: absolute;
+    top: 33vh;
+    left: 61vw;
+  }
+}
+/* #region Loading */
+
+/* #region Potions */
 .potion {
   position: relative;
   transform: translate(0%, 10%);
@@ -76,6 +153,7 @@ body::before{
     left: 64vw;
   }
 }
+/* #endregion Potions */
 
 .link {
   position: absolute;
@@ -83,11 +161,81 @@ body::before{
   bottom: 10vh;
 }
 
+/* #region Keyframes */
+@keyframes loading {
+  0%{
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+/* #endregion Keyframes */
+
+/* #region Mediaqueries */
+@media only screen and (min-width: 500px){
+  .loader{
+    & #steam {
+      top: 10vh;
+    }
+
+    & #twinkle1 {
+      top: 31vh;
+      left: 0;
+    }
+  
+    & #twinkle2 {
+      top: 17vh;
+      left: 14vw;
+    }
+  
+    & #twinkle3 {
+      top: 12vh;
+      left: 48vw;
+    }
+  
+    & #twinkle4 {
+      top: 24vh;
+      left: 56vw;
+    }
+  }
+}
+
 @media only screen and (min-width: 800px){
   main{
     height: 90vh;
   }
+ 
+  .loader{
+    height: fit-content;
+    transform: translate(0%, 20%);
+
+    & #steam {
+      top: 0;
+    }
+
+    & #twinkle1 {
+      top: 26vh;
+      left: 13vw;
+    }
   
+    & #twinkle2 {
+      top: 7vh;
+      left: 22vw;
+    }
+  
+    & #twinkle3 {
+      top: 0vh;
+      left: 50vw;
+    }
+  
+    & #twinkle4 {
+      top: 19vh;
+      left: 53vw;
+    }
+  }
+
   .potion {
     width: 50vw;
     transform: translate(0%, 30%);
@@ -125,3 +273,4 @@ body::before{
     left: auto;
   }
 }
+/* #endregion Mediaqueries */
