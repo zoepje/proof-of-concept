@@ -27,24 +27,51 @@ body {
     background-color: var(--Snow);
 }
 
+header {
+    display: grid;
+    justify-items: center;
+}
+
 nav {
-    height: 80%;
-    width: 350px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left:0;
-    overflow-x: hidden;
-    background-color: var(--Raisin-black);
-    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1em;
+    justify-items: center;
+    grid-column-start: second-line;
+    grid-row: 1 / span all;
+
+}
+
+nav li {
+    display: grid;
+    justify-items: center;
+    grid-row: 3;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--Snow);
+    list-style-type: none;
+    
 }
 
 nav li a {
-    padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: var(--Snow);
   display: block;
+  z-index: 1;
+  
 }
 
 main {
@@ -77,14 +104,14 @@ footer {
 }
 
 h2 {
-    background-image: -webkit-linear-gradient(270deg, var(--orange-crayola), var(--majorelle-blue));
+    background-image: linear-gradient(to right, var(--orange-crayola), var(--majorelle-blue));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 72px;
 }
 
 h3 {
-    background-image: -webkit-linear-gradient(270deg, var(--orange-crayola), var(--majorelle-blue));
+    background-image: linear-gradient(to right, var(--orange-crayola), var(--majorelle-blue));
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 42px;
@@ -126,8 +153,9 @@ input[type="submit"]:hover {
 .dashboard-header {
     grid-column: 1 / -1;
     background-color: #333;
-    color: #fff;
+    color: var(--Snow);
     padding: 10px;
+    text-align: center;
 }
 
 .dashboard-content {
@@ -135,6 +163,7 @@ input[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    
 }
 
 .dashboard-card {
@@ -144,7 +173,8 @@ input[type="submit"]:hover {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	margin: 20px;
 	padding: 20px;
-	width: 250px;
+	width: 450px;
+    height: 450px;
 }
 
 .dashboard-card:hover {

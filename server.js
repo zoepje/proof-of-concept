@@ -43,7 +43,7 @@ app.get('/dashboard', async function(request, response) {
     ],
     dimensions: [
       {
-        name: 'city',
+        name: 'country',
       },
     ],
     metrics: [
