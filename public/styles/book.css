@@ -4,6 +4,7 @@ body{
 
 main{
   display: flex;
+  flex-flow: row wrap;
   width: 95vw;
   overflow-x: auto;
   position: relative;
