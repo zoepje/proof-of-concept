@@ -35,17 +35,14 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </section>
 	
-	<section class="dashboard-card">
-		<h3>Card 4</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-	<!-- Add more cards or components as needed -->
+
+	
 </main>
-<% console.log(data.rows) %>
+<%# console.log(data.rows) %>
 
-<% data.rows.forEach(function(row) { %>
+<%# data.rows.forEach(function(row) { %>
 
-    <p><%= row.dimensionValues[0].value %>: <%= row.metricValues[0].value %></p>
+    <p><%#= row.dimensionValues[0].value %>: <%#= row.metricValues[0].value %></p>
 
-<% }) %>
+<%#S }) %>
 <%- include('./partials/footer') %>
