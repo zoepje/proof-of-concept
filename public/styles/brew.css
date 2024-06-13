@@ -167,16 +167,20 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
     & label img {
       height: revert-layer;
     }
-
-    & .mobile-label {
-      display: none;
-    }
   }
 
   .ingredient-card {
     top: 70px;
     left: 30px;
     height: 70vh;
+  }
+}
+
+@media (hover: hover) {
+  fieldset {
+    & .mobile-label {
+      display: none;
+    }
   }
 
   fieldset:hover ~ .ingredient-card {
