@@ -27,7 +27,7 @@ body::before{
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  animation: loading 1.2s linear forwards;
+  animation: loading 1.2s forwards;
 }
 
 .loader-container::before{
@@ -164,11 +164,11 @@ body::before{
 /* #region Keyframes */
 @keyframes loading {
   0%{
-    display: block;
+    visibility: visible;
   }
 
   100% {
-    display: none;
+    visibility: hidden;
   }
 }
 /* #endregion Keyframes */
