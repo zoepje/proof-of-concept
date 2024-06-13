@@ -39,6 +39,16 @@ form {
   overflow-x: auto;
 }
 
+form::-webkit-scrollbar{
+  height: 11px;
+}
+
+form::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.414);
+  background-color: rgba(0, 0, 0, 0.414);
+}
+
 fieldset {
   border: none;
   border-radius: var(--border-radius);

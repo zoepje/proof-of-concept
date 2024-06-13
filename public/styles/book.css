@@ -4,13 +4,22 @@ body{
 
 main{
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   width: 95vw;
   overflow-x: auto;
   position: relative;
   margin-top: 8rem;
 }
 
+main::-webkit-scrollbar{
+  height: 11px;
+}
+
+main::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.414);
+  background-color: rgba(0, 0, 0, 0.414);
+}
 .potion-card {
   width: 300px;
   height: 500px;
