@@ -29,86 +29,69 @@ body {
 
 header {
     display: grid;
-    justify-items: center;
-}
-
-.fresk-logo {
-    position: absolute;
-    height: 50px;
-    top: 50px;
-    left: 0;
-}
-
-.transition img {
-    height: 75px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.transition-1 {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    z-index: 200;
-    background: var(--grey);
-    transition: var(--tran-1);
-}
-
-.transition-1.is-active {
-    top: 0;
-}
-
-.transition-2 {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 100%;
-    z-index: 200;
-    background: var(--grey);
-    transition: var(--tran-1);
-}
-
-.transition-2.is-active {
-    top: 0;
+    justify-items: start;
+    background-color: var(--Snow);
 }
 
 nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 10px;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--Xiketic);
     color: #fff;
+    border-radius: 50px;
 }
 
 nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    display: flex;
     gap: 1em;
-    justify-items: center;
-    grid-column-start: second-line;
-    grid-row: 1 / span all;
-
+    justify-content: center;
 }
 
 nav li {
     display: grid;
     justify-items: center;
     grid-row: 3;
-    background-color: #444;
     padding: 10px 20px;
-    border-radius: 10px;
     text-decoration: none;
     color: var(--Snow);
     list-style-type: none;
-    
+    border-right: 1px solid var(--Sonic-silver);
+}
+
+nav li:last-child {
+    border: none;
+}
+
+.navlink {
+    color: var(--Snow);
+	position: relative;
+	outline: none !important;
+	text-transform:capitalize;
+	transition: 0.2s;
+}
+
+.navlink::after {
+    content: "";
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 0;
+	transition: 0.2s;
+}
+
+.navlink:hover,
+.navlink:focus {
+	color: var(--Snow);
+}
+
+.navlink:hover::after,
+.navlink:focus::after {
+	background-color: var(--Snow);
+	width: 100%;
 }
 
 nav li a {
@@ -120,9 +103,6 @@ nav li a {
   z-index: 1;
 }
 
-nav li:hover {
-    border: 3px solid var(--Sonic-silver);
-}
 
 main {
     display: flex;
@@ -146,7 +126,9 @@ section {
 header {
     width: 100%;
     padding: 1.5em;
-    background-color: var(--orange-crayola);
+    display: grid;
+    justify-items: start;
+    background-color: var(--Snow);
 }
 
 footer {
@@ -166,7 +148,6 @@ footer {
     background-repeat: no-repeat;
     background-size: 100%; 
     text-align: left;
-
 }
 
 form.login {
@@ -182,8 +163,6 @@ form.login {
     width: 50%;
 
 }
-
-
 
 h2 {
     background-image: linear-gradient(to right, var(--orange-crayola), var(--majorelle-blue));
@@ -223,6 +202,27 @@ input[type="submit"]:hover {
     color: var(--Xiketic);
 }
 
+.return-button {
+    text-decoration: none;
+    border: 2px solid var(--Sonic-silver);
+    border-radius: 1.2em;
+    padding: .8em;
+    font-family: var(--body-fonts);
+    font-size: 1.1em;
+    font-weight: var(--font-large);
+}
+
+.return-button:hover {
+    background-color: var(--Xiketic);
+    color: var(--Snow);
+}
+
+.return-button:active {
+    background-color: var(--orange-crayola);
+    color: var(--Snow);
+}
+
+
 /* Dashboard stijling */
 .dashboard {
 	display: grid;
@@ -234,10 +234,11 @@ input[type="submit"]:hover {
 
 .dashboard-header {
     grid-column: 1 / -1;
-    background-color: #333;
-    color: var(--Snow);
+    background-color: var(--Snow);
+    color: var(--Xiketic);
     padding: 10px;
     text-align: center;
+    justify-items: center;
 }
 
 .dashboard-content {
@@ -261,4 +262,80 @@ input[type="submit"]:hover {
 
 .dashboard-card:hover {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 30em) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+        width: 75vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .login-section {
+        display: flex;
+        justify-content: center;
+        background: url(../img/fresk-backdrop.png);
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        text-align: left;
+    }
+    
+    form.login {
+        padding: 5em;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        padding: 2em;
+        border-radius: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+    
+    }
+
+    input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 0.4em;
+        margin-bottom: 30px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 0.5em;
+        text-transform: uppercase;
+        background-color: var(--Xiketic);
+        color: var(--Snow);
+        font-family: var(--body-fonts);
+        border: 2px solid var(--Sonic-silver);
+        border-radius: 5px;
+    }
+    
+    input[type="submit"]:hover {
+        cursor: pointer;
+        background-color: var(--Snow);
+        color: var(--Xiketic);
+    }
+    
+    h2 {
+        background-image: linear-gradient(to right, var(--orange-crayola), var(--majorelle-blue));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 36px;
+    }
+    
+
 }
