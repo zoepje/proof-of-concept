@@ -1,7 +1,8 @@
 const ingredientList = document.querySelector('.ingredient-list'),
       noItems = document.createElement('li'),
       form = document.querySelector('#ingredient-form'),
-      cauldron = document.querySelector(".container img");
+      cauldron = document.querySelector(".container .cauldron"),
+      soup = document.getElementById('soup');
 
 // #region List
 // Function update de gekozen ingredienten
@@ -25,9 +26,25 @@ function listIngredients() {
   }
 }
 
+// Functie verander kleur soep
+function colorSoup() {
+  const checkboxes = document.querySelectorAll('input[name="ingredients"]');
+  let selectedColor = '';
+
+  checkboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+          const color = checkbox.parentElement.querySelector('input[name="color"]').value;
+          selectedColor = color;
+      }
+  });
+
+  soup.style.setProperty('--soup', selectedColor)
+}
+
 // Doe een eventListener op elke checkbox wanneer er iets veranderd aan de input
 document.querySelectorAll('input[name="ingredients"]').forEach(checkbox => {
     checkbox.addEventListener('change', listIngredients);
+    checkbox.addEventListener('change', colorSoup);
 });
 
 // Voor het begin van het laden
@@ -62,7 +79,7 @@ form.addEventListener('submit', function(event) {
 
 // #region Animation
 function animateIngredient(checkbox, cauldron) {
-  const label = checkbox.nextElementSibling;
+  const label = document.querySelector('label[for="' + checkbox.id + '"]')
   const img = label.querySelector("img");
   const clonedImg = img.cloneNode(true);
 

@@ -15,8 +15,11 @@
             <!-- Checked ingredienten komen hier te staan -->
         </ul>
       </details>
-      
-      <img src="/assets/cauldron.png" alt="cauldron" width="400" height="400">
+
+      <svg class="cauldron" width="400" height="400" viewBox="0 0 573 557" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M269.584 5.22611C89.1935 16.9827 34.6049 58.4982 29.8594 77.7864C24.7159 86.3994 40.575 101.582 49.1475 108.096C31.3902 107.637 -3.02239 116.363 1.38634 154.939C5.79506 193.515 40.575 197.036 57.4139 193.975C-18.2692 351.219 56.8016 450.844 103.797 481.001L74.8651 531.518C77.8042 565.685 102.113 556.776 113.901 548.05L141.914 504.882C309.813 576.891 431.39 524.17 471.191 488.808L497.827 531.518C532.362 549.152 537.934 524.17 536.404 509.474L506.553 458.498C625.221 319.991 555.998 201.782 506.553 159.991C543.66 157.786 550.487 134.579 549.262 123.251C541.18 81.3684 508.543 70.8977 493.235 70.8977C498.378 65.3867 500.583 56.0489 501.042 52.0688C443.728 -4.87722 322.856 -2.88717 269.584 5.22611Z" fill="#353535" stroke="#4A4A4A" stroke-width="0.918484"/>
+        <path id="soup" d="M328.571 10.4028C304.323 2.32016 220.802 2.13646 182.073 3.05494C157.825 -0.251641 93.2861 12.3929 64.0476 19.1285C10.4082 31.9873 0.978377 49.2854 2.96843 56.3271C58.0775 86.086 165.54 83.7285 212.383 78.83C258.766 73.3191 355.207 59.9092 369.903 50.3569C384.599 40.8047 376.026 28.9256 369.903 24.1801L328.571 10.4028Z" fill="#545353" stroke="#545353" stroke-width="5" transform="translate(80, 20)"/>
+      </svg>
 
       <button type="submit" class="button" form="ingredient-form">Start brewing</button>
     </div>
@@ -26,6 +29,7 @@
         <div class="container-ingredient">
           <fieldset>
             <input name="ingredients" type="checkbox" value="<%= ingredient.id %>" id="<%= ingredient.name %>">
+            <input type="hidden" name="color" value="<%= ingredient.color.hex %>">
             <label for="<%= ingredient.name %>">
               <img src="<%= ingredient.asset %>" alt="<%= ingredient.name %>" width="100" height="100">
             </label>

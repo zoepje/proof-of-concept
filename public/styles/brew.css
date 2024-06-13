@@ -5,7 +5,12 @@ body{
 .container {
   height: 78vh;
 
-  & img {
+  & #soup {
+    stroke: var(--soup);
+    fill: var(--soup);
+  }
+
+  & .cauldron {
     position: absolute;
     z-index: -1;
     width: 60%;
@@ -130,7 +135,7 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
 /* #region Media */
 @media only screen and (min-width: 500px){
   .container{
-    & img {
+    & .cauldron {
       bottom: 16vh;
     }
   }
@@ -138,13 +143,13 @@ fieldset:has(:focus-visible) ~ .ingredient-card {
 
 @media only screen and (min-width: 800px){
   .container{
-    & img {
+    & .cauldron {
       bottom: 20vh;
     }
 
     & button {
       right: 30px;
-      left:auto;
+      left: auto;
     }
   }
 
