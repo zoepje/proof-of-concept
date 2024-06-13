@@ -92,7 +92,7 @@ body::before{
     left: 61vw;
   }
 }
-/* #region Loading */
+/* #endregion Loading */
 
 /* #region Potions */
 .potion {

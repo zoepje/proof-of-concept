@@ -4,6 +4,30 @@ const ingredientList = document.querySelector('.ingredient-list'),
       cauldron = document.querySelector(".container .cauldron"),
       soup = document.getElementById('soup');
 
+// Functie verander kleur soep
+function colorSoup() {
+  const checkboxes = document.querySelectorAll('input[name="ingredients"]');
+  let selectedColor = '';
+
+  checkboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+          const color = checkbox.parentElement.querySelector('input[name="color"]').value;
+          selectedColor = color;
+      }
+  });
+
+  soup.style.setProperty('--soup', selectedColor)
+}
+
+// Functie geeft het grootste getal terug
+function max(a, b) {
+	if (a > b) {
+		return a;
+	} else {
+		return b;
+	}
+}
+
 // #region List
 // Function update de gekozen ingredienten
 function listIngredients() {
@@ -21,24 +45,9 @@ function listIngredients() {
 
   // Als er geen ingredienten zijn laat dan deze text zien
   if (checkboxes.length === 0) {
-    noItems.textContent = 'Start putting ingrediënts together';
+    noItems.textContent = 'Start putting ingredients together';
     ingredientList.appendChild(noItems);
   }
-}
-
-// Functie verander kleur soep
-function colorSoup() {
-  const checkboxes = document.querySelectorAll('input[name="ingredients"]');
-  let selectedColor = '';
-
-  checkboxes.forEach(checkbox => {
-      if (checkbox.checked) {
-          const color = checkbox.parentElement.querySelector('input[name="color"]').value;
-          selectedColor = color;
-      }
-  });
-
-  soup.style.setProperty('--soup', selectedColor)
 }
 
 // Doe een eventListener op elke checkbox wanneer er iets veranderd aan de input
@@ -58,12 +67,12 @@ function checked() {
   const checkedCount = checkboxes.length;
 
   if(checkedCount < 1){
-    alert("You don't have any ingrediënts selected");
+    alert("You don't have any ingredients selected");
     return false;
   }
 
   if(checkedCount < 2){
-    alert("What a boring potion, try adding one more ingrediënt");
+    alert("What a boring potion, try adding one more ingredient");
     return false;
   }
 
@@ -116,14 +125,6 @@ function animateIngredient(checkbox, cauldron) {
   clonedImg.addEventListener("animationend", function() {
     clonedImg.remove();
   })
-}
-
-function max(a, b) {
-	if (a > b) {
-		return a;
-	} else {
-		return b;
-	}
 }
 
 form.addEventListener("change", function(event) {
