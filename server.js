@@ -3,27 +3,21 @@ import fetchJson from './helpers/fetch-json.js'
 
 import express, { request, response } from 'express'
 
-const app = express()
+/*** Variablen ***/
+const apiUrl = "https://potion-api-jet.vercel.app/",
+      potionsUrl = `${apiUrl}potions`,
+      ingredientsUrl = `${apiUrl}ingredients`,
+      app = express();
 
 app.set('view engine', 'ejs')
-
 app.set('views', './views')
-
 app.use(express.static('public'))
-
 app.use(express.urlencoded({extended: true}))
-
 app.set('port', process.env.PORT || 8000)
 
 app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
-
-/*** Variablen ***/
-const apiUrl = "https://potion-api-jet.vercel.app/",
-      potionsUrl = `${apiUrl}potions`,
-      ingredientsUrl = `${apiUrl}ingredients`;
-
 
 /*** Routes ***/
 // Index
