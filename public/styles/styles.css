@@ -47,6 +47,7 @@ nav ul {
     display: flex;
     gap: 1em;
     justify-content: center;
+    
 }
 
 nav li {
@@ -58,6 +59,7 @@ nav li {
     color: var(--Snow);
     list-style-type: none;
     border-right: 1px solid var(--Sonic-silver);
+    
 }
 
 nav li:last-child {
@@ -70,6 +72,7 @@ nav li:last-child {
 	outline: none !important;
 	text-transform:capitalize;
 	transition: 0.2s;
+    
 }
 
 .navlink::after {
