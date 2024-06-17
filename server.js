@@ -26,8 +26,7 @@ app.get('/', (request, response) => {
     fetchJson(`${potionsUrl}`),
     fetchJson(`${ingredientsUrl}`)
   ]).then(([potions, ingredients]) => {
-
-  response.render('index', {potions, ingredients });
+    response.render('index', {potions, ingredients });
   })
 })
 
@@ -37,8 +36,7 @@ app.get('/brew', (request, response) => {
     fetchJson(`${potionsUrl}`),
     fetchJson(`${ingredientsUrl}`)
   ]).then(([potions, ingredients]) => {
-
-  response.render('brew', {potions, ingredients });
+    response.render('brew', {potions, ingredients });
   })
 })
 
@@ -91,7 +89,6 @@ app.get('/potions', (request, response) => {
     fetchJson(`${potionsUrl}`),
     fetchJson(`${ingredientsUrl}`)
   ]).then(([potions, ingredients]) => {
-
-  response.render('book', {potions, ingredients });
+    response.render('book', {potions, ingredients });
   })
 })
