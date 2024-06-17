@@ -2,15 +2,15 @@
 
 <header class="dashboard-header">
 	<h1>Dashboard</h1>
-<nav>
-	<ul>
-		<li><a class="navlink" href="/">Home</a></li>
-		<li><a class="navlink" href="/google">Google</a></li>
-		<li><a class="navlink" href="/linkedin">LinkedIn</a></li>
-		<li><a class="navlink" href="/hotjar">Hotjar</a></li>
-
-	</ul>
-</nav>
+	<nav>
+		<ul>
+			<li><a class="navlink" href="/">Home</a></li>
+			<li><a class="navlink" href="/google">Google</a></li>
+			<li><a class="navlink" href="/linkedin">LinkedIn</a></li>
+			<li><a class="navlink" href="/hotjar">Hotjar</a></li>
+	
+		</ul>
+	</nav>
 </header>
 
 <!-- Dashboard content -->
@@ -18,31 +18,32 @@
 	<!-- Card 1 -->
 	<section class="dashboard-card">
 		<h3>Google</h3>
-			<a href="/google"><img src="/img/google.png" alt="logo Google"></a>
+			<a href="/google">
+				<img src="/img/google.png" alt="logo Google">
+			</a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
+	</section>
 
 	<!-- Card 2 -->
 	<section class="dashboard-card">
 		<h3>LinkedIn</h3>
-			<a href="/linkedin"><img src="/img/linkedin.png" alt="logo Linkedin"></a>
+			<a href="/linkedin">
+				<img src="/img/linkedin.png" alt="logo Linkedin">
+			</a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
+	</section>
 
 	<section class="dashboard-card">
 		<h3>Hotjar</h3>
 			<a href="/hotjar"><img src="/img/hotjar.png" alt="logo Hotjar"></a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </section>
-	
-
-	
+	</section>	
 </main>
+
 <%# console.log(data.rows) %>
 
 <%# data.rows.forEach(function(row) { %>
-
     <p><%#= row.dimensionValues[0].value %>: <%#= row.metricValues[0].value %></p>
-
 <%#S }) %>
+
 <%- include('./partials/footer') %>
