@@ -37,7 +37,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 2px;
     background-color: var(--Xiketic);
     color: #fff;
     border-radius: 50px;
@@ -56,10 +56,10 @@ nav li {
     grid-row: 3;
     padding: 10px 20px;
     text-decoration: none;
+    text-align: left;
     color: var(--Snow);
     list-style-type: none;
     border-right: 1px solid var(--Sonic-silver);
-    
 }
 
 nav li:last-child {
@@ -72,7 +72,6 @@ nav li:last-child {
 	outline: none !important;
 	text-transform:capitalize;
 	transition: 0.2s;
-    
 }
 
 .navlink::after {
@@ -98,9 +97,10 @@ nav li:last-child {
 }
 
 nav li a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 8px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5em;
+  text-align: left;
   color: var(--Snow);
   display: block;
   z-index: 1;
@@ -137,7 +137,7 @@ header {
 footer {
     width: 100%;
     padding: 1.5em;
-    background-color: var(--Raisin-black);
+    background-color: var(--Snow);
     position: fixed;
     bottom: 0;
 }
