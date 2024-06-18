@@ -1,5 +1,6 @@
   <%- include('./partials/head') %>
   <link rel="stylesheet" href="/styles/potion.css">
+  <script src="/scripts/potion.js" defer></script>
   <title>Nasty potion | Book of Potions</title>
 </head> 
 
@@ -9,6 +10,9 @@
       </svg>
 
       <h2>Something magical is brewing...</h2>
+      <p class="ingredient-colors" style="display: none;">
+        <%= `["#6DE688", "#CCDBC1", "#5E990C"]` %>
+      </p>
     </article>
   </div>
 

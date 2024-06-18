@@ -75,8 +75,15 @@ app.post('/brew', (request, response) => {
 
 // Potion
 app.get('/potion/:id', (request, response) =>{
-  fetchJson(`${potionsUrl}/${request.params.id}`).then((potion) =>{
-    response.render('potion', {potion});
+  Promise.all([
+    fetchJson(`${potionsUrl}/${request.params.id}`),
+    fetchJson(`${ingredientsUrl}`)
+  ]).then(([potion, ingredients]) => {
+    let filterIngredients = ingredients.filter(ingredient => {
+      return potion.ingredients.includes(ingredient.id);
+    })
+    
+    response.render('potion', {potion, ingredients: filterIngredients});
   })
 })
 

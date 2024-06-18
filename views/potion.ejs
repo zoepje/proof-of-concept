@@ -1,29 +1,38 @@
-  <%- include('./partials/head') %>
-  <link rel="stylesheet" href="/styles/potion.css">
-  <title><%= potion.name %> | Book of Potions</title>
-</head> 
-<body>
-  <%- include('./partials/loader') %>
-        <path id="soup" d="M328.571 10.4028C304.323 2.32016 220.802 2.13646 182.073 3.05494C157.825 -0.251641 93.2861 12.3929 64.0476 19.1285C10.4082 31.9873 0.978377 49.2854 2.96843 56.3271C58.0775 86.086 165.54 83.7285 212.383 78.83C258.766 73.3191 355.207 59.9092 369.903 50.3569C384.599 40.8047 376.026 28.9256 369.903 24.1801L328.571 10.4028Z" fill="<%= potion.color.hex %>" stroke="<%= potion.color.hex %>" stroke-width="5" transform="translate(80, 20)"/>
-      </svg>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/styles/potion.css">
+    <script src="/scripts/potion.js" defer></script>
+    <title><%= potion.name %> | Book of Potions</title>
+  </head> 
 
-      <h2>Something magical is brewing...</h2>
-    </article>
-  </div>
+  <body>
+    <%- include('./partials/loader') %>
+          <path id="soup" d="M328.571 10.4028C304.323 2.32016 220.802 2.13646 182.073 3.05494C157.825 -0.251641 93.2861 12.3929 64.0476 19.1285C10.4082 31.9873 0.978377 49.2854 2.96843 56.3271C58.0775 86.086 165.54 83.7285 212.383 78.83C258.766 73.3191 355.207 59.9092 369.903 50.3569C384.599 40.8047 376.026 28.9256 369.903 24.1801L328.571 10.4028Z" fill="<%= potion.color.hex %>" stroke="<%= potion.color.hex %>" stroke-width="5" transform="translate(80, 20)"/>
+        </svg>
 
-  <main>
-    <article class="potion nice">
-      <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star1">
-      <img src="/assets/star-yellow-glow.png" alt="star" width="40" height="40" id="star2">
-      <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star3">
-      <img src="<%= potion.asset %>" alt="<%= potion.name %>" width="400" height="400">
-      <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star4">
-      <img src="/assets/star-white-glow.png" alt="star" width="40" height="40" id="star5">
-      <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star6">
-      <h1>You brewed a <%= potion.name %></h1>
-    </article>
-  </main>
+        <h2>Something magical is brewing...</h2>
+        <p class="ingredient-colors" style="display: none;">
+          <%= JSON.stringify(ingredients.map(ingredient => ingredient.color.hex)) %>
+        </p>
+      </article>
+    </div>
 
-  <a href="/brew" class="link">Brew more</a>
-</body>
+    <main>
+      <article class="potion nice">
+        <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star1">
+        <img src="/assets/star-yellow-glow.png" alt="star" width="40" height="40" id="star2">
+        <img src="/assets/star-white.png" alt="star" width="40" height="40" id="star3">
+        <img src="<%= potion.asset %>" alt="<%= potion.name %>" width="400" height="400">
+        <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star4">
+        <img src="/assets/star-white-glow.png" alt="star" width="40" height="40" id="star5">
+        <img src="/assets/star-yellow.png" alt="star" width="40" height="40" id="star6">
+        <h1>You brewed a <%= potion.name %></h1>
+      </article>
+    </main>
+
+    <a href="/brew" class="link">Brew more</a>
+  </body>
 </html>
+
+<script>
+
+</script>

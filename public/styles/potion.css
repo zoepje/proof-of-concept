@@ -27,7 +27,7 @@ body::before{
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  animation: loading 1.2s forwards;
+  animation: loading 4s forwards;
 }
 
 .loader-container::before{
