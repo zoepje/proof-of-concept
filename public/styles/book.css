@@ -12,13 +12,15 @@ main{
 }
 
 main::-webkit-scrollbar{
-  height: 11px;
+  height: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.665);
 }
 
 main::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  border: 2px solid rgba(0, 0, 0, 0.414);
-  background-color: rgba(0, 0, 0, 0.414);
+  border: 1px solid rgba(0, 0, 0, 0.665);
+  background-color: #d6228e;
 }
 
 .potion-card {
