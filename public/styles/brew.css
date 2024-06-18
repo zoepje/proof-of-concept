@@ -40,13 +40,15 @@ form {
 }
 
 form::-webkit-scrollbar{
-  height: 11px;
+  height: 10px;
+  border-radius: 8px;
+  background-color: var(--accent-color3);
 }
 
 form::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  border: 2px solid rgba(0, 0, 0, 0.414);
-  background-color: rgba(0, 0, 0, 0.414);
+  border: 2px solid rgba(0, 0, 0, 0.94);
+  background-color: rgba(0, 0, 0, 0.706);
 }
 
 fieldset {
