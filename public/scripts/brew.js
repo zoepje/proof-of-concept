@@ -1,7 +1,7 @@
 const ingredientList = document.querySelector('.ingredient-list'),
       noItems = document.createElement('li'),
       form = document.querySelector('#ingredient-form'),
-      cauldron = document.querySelector(".container .cauldron"),
+      cauldron = document.querySelector('.container .cauldron'),
       soup = document.getElementById('soup');
 
 // Functie verander kleur soep
