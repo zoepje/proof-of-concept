@@ -48,7 +48,8 @@ Als je aan deze website wilt werken kun je de reposertory forken:
 1. Pas alles naar eigen wens aan.
 
 ## Bronnen
-
+* [MDN Docs](https://developer.mozilla.org/en-US/)
+* [W3schools](https://www.w3schools.com/)
 
 ## Licentie
 
