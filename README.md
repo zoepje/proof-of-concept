@@ -1,6 +1,7 @@
 <!---- > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md) --->
 
-# Merlin's book of potions
+# Merlin's book of potions 🧙‍♂️
+
 Merlin's Book of Potions is een web game warin je verschillende toverdranken kan brouwen.
 
 ## Inhoudsopgave
