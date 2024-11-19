@@ -99,3 +99,5 @@ app.get('/potions', (request, response) => {
     response.render('book', {potions, ingredients });
   })
 })
+
+module.exports = app
