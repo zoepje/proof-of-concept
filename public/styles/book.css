@@ -82,6 +82,10 @@ main::-webkit-scrollbar-thumb {
   & strong {
     text-decoration: underline;
   }
+
+  & ul {
+    list-style: none;
+  }
 }
 
 .potion-card input:checked + label + .potion-card-back {
