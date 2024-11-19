@@ -23,8 +23,8 @@
           <p><strong>Rarity:</strong> <%= potion.rarity %> </p>
           <ul>
             Ingrediënts:
-            <% potion.ingredients.forEach(ingredient => { %>
-              <li><%= ingredient %></li>
+            <% potion.ingredientNames.forEach(name => { %>
+              <li><%= name %></li>
             <% }) %>
           </ul>
         </article>

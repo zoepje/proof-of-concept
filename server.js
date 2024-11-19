@@ -96,6 +96,17 @@ app.get('/potions', (request, response) => {
     fetchJson(`${potionsUrl}`),
     fetchJson(`${ingredientsUrl}`)
   ]).then(([potions, ingredients]) => {
-    response.render('book', {potions, ingredients });
+    const potionsWithIngredients = potions.map(potion => {
+      const ingredientNames = potion.ingredients.map(id => {
+        const ingredient = ingredients.find(ing => ing.id === id);
+        return ingredient ? ingredient.name : 'Unknown Ingredient';
+      });
+      
+      return {
+        ...potion,
+        ingredientNames,
+      };
+    });  
+    response.render('book', {potions: potionsWithIngredients});
   })
 })
