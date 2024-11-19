@@ -21,6 +21,12 @@
           <p><%= potion.description %></p>
           <p><strong>Effects:</strong> <%= potion.effects %></p>
           <p><strong>Rarity:</strong> <%= potion.rarity %> </p>
+          <ul>
+            Ingrediënts:
+            <% potion.ingredients.forEach(ingredient => { %>
+              <li><%= ingredient %></li>
+            <% }) %>
+          </ul>
         </article>
       </fieldset>
     <% }) %> 
